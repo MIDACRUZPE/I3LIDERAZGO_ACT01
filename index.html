@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>i3 | Auditoría Conductual y Lingüística del Ser - Liderazgo_ACT01</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap');
+    
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .sticker-card {
+      border: 4px solid #ffffff;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      border-radius: 1.25rem;
+    }
+
+    .comic-box {
+      border: 3px solid rgba(0, 0, 0, 0.85);
+      box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.85);
+      border-radius: 1rem;
+    }
+
+    .badge-step {
+      border: 2px solid #000;
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    .toast-slide {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Prevención de Auto-Zoom en dispositivos iOS / Móviles */
+    @media (max-width: 640px) {
+      input, textarea, select {
+        font-size: 16px !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-amber-50 text-slate-900 antialiased min-h-screen flex flex-col selection:bg-purple-500 selection:text-white">
+
+  <!-- NAVBAR / HEADER -->
+  <header class="bg-purple-900 text-white sticky top-0 z-50 border-b-4 border-yellow-400 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <span class="bg-yellow-400 text-purple-950 font-black px-3 py-1 rounded-xl text-xl tracking-wider comic-box inline-block transform -rotate-2">
+          i3
+        </span>
+        <div>
+          <h1 class="text-lg sm:text-xl font-extrabold tracking-tight leading-none text-white">
+            Instituto i3
+          </h1>
+          <p class="text-xs text-purple-200 font-semibold mt-0.5">
+            Módulo: Liderazgo y Desarrollo Humano
+          </p>
+        </div>
+      </div>
+      
+      <!-- Indicador de Autoguardado -->
+      <div class="flex items-center gap-2 bg-purple-950/80 px-3 py-1.5 rounded-xl border border-purple-700/50 text-xs font-bold text-yellow-300">
+        <i data-lucide="save" class="w-4 h-4 text-lime-400 animate-pulse"></i>
+        <span id="save-status-text">Autoguardado Local Activo</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full space-y-10">
+
+    <!-- HERO BANNER -->
+    <section class="bg-yellow-400 sticker-card p-6 sm:p-8 text-purple-950 relative overflow-hidden">
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 bg-purple-900 text-yellow-300 font-extrabold text-xs sm:text-sm px-4 py-1.5 rounded-full border-2 border-purple-950 shadow">
+          <i data-lucide="zap" class="w-4 h-4 text-yellow-400"></i>
+          <span>ACTIVIDAD PRÁCTICA DE AFIANZAMIENTO #01</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
+          Auditoría Conductual y Lingüística del Ser
+        </h2>
+        <p class="text-base sm:text-lg font-bold leading-relaxed text-purple-950/90">
+          Descubre la diferencia entre lo que crees que eres (<span class="underline decoration-purple-800 decoration-2">Autoconcepto</span>) y cómo te tratas a ti mismo en el día a día (<span class="underline decoration-purple-800 decoration-2">Autoestima</span>).
+        </p>
+        
+        <!-- Recuadro Explicativo de Glosario Técnico -->
+        <div class="bg-white/95 backdrop-blur border-2 border-purple-900 rounded-2xl p-4 sm:p-5 text-sm space-y-2 text-slate-800 shadow-sm">
+          <div class="flex items-center gap-2 font-black text-purple-900 text-base">
+            <i data-lucide="book-open" class="w-5 h-5 text-purple-700"></i>
+            <span>Conceptos Clave para el Ejercicio Autónomo:</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="bg-purple-50 p-3 rounded-xl border border-purple-200">
+              <strong class="text-purple-900 block font-extrabold mb-1">📢 Autoconcepto (Hacia Afuera)</strong>
+              Es la imagen verbal y corporal que proyectas públicamente: las frases cotidianas que expresas a otros y la postura que adopta tu cuerpo en cada situación.
+            </div>
+            <div class="bg-pink-50 p-3 rounded-xl border border-pink-200">
+              <strong class="text-pink-900 block font-extrabold mb-1">🧠 Autoestima (Hacia Adentro)</strong>
+              Es tu evaluación privada: el diálogo mental automático con el que te juzgas y la sintomatología física (tensión, nudos, presión) que genera esa idea.
+            </div>
+          </div>
+        </div>
+
+        <!-- Instrucciones detalladas de trabajo autónomo -->
+        <div class="bg-purple-900 text-yellow-300 rounded-2xl p-4 sm:p-5 text-xs sm:text-sm border-2 border-purple-950 space-y-2">
+          <div class="font-black text-yellow-400 flex items-center gap-2 text-sm sm:text-base">
+            <i data-lucide="compass" class="w-5 h-5"></i>
+            <span>¿Cómo desarrollar este ejercicio de manera 100% autónoma?</span>
+          </div>
+          <p class="text-purple-100 font-medium leading-relaxed">
+            <strong>1. Registro:</strong> Diligencia tus datos en la <strong>Sección 0</strong>.<br/>
+            <strong>2. Método por Dimensión:</strong> Navega por las <strong>5 pestañas</strong>. En cada área, <u>identifica una situación concreta y real de tu vida cotidiana</u> (ej. una exposición, un desacuerdo, un momento de estrés) y responde los 6 campos desglosando qué dijiste/hiciste públicamente (Autoconcepto) versus qué pensaste/sentiste en privado (Autoestima).<br/>
+            <strong>3. Secuencia de Entrega:</strong> Al completar las 5 dimensiones, dirígete al final e inicia la transmisión: primero presiona <strong>"1. Enviar Trabajo ▶"</strong> para registrar tus datos con el docente, lo cual desbloqueará automáticamente el botón <strong>"2. Exportar a PDF"</strong> para generar tu evidencia de la plataforma virtual.
+          </p>
+        </div>
+
+        <p class="text-xs sm:text-sm font-semibold italic text-purple-900/90">
+          "¡Bienvenido/a! Todas las semanas nos decimos palabras y hacemos gestos sin darnos cuenta de cómo nos afectan. Esta herramienta te ayudará a hacer un mapa exacto de tus hábitos de pensamiento, lenguaje y cuerpo para cambiarlos por conductas de éxito."
+        </p>
+      </div>
+    </section>
+
+    <!-- RUTA DE TRABAJO AUTÓNOMO (4 PASOS) -->
+    <section class="bg-cyan-500 sticker-card p-6 text-white space-y-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-purple-900 text-yellow-300 p-2.5 rounded-2xl border-2 border-white">
+          <i data-lucide="map" class="w-7 h-7"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl font-black text-slate-900">Ruta Obligatoria de Trabajo Autónomo</h3>
+          <p class="text-slate-900 font-bold text-xs sm:text-sm">Sigue esta guía en secuencia estricta de izquierda a derecha.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Paso 1 -->
+        <div class="bg-white text-slate-900 p-4 rounded-xl border-3 border-black shadow-md flex flex-col justify-between space-y-3 relative">
+          <span class="badge-step absolute -top-3 -left-3 bg-yellow-400 text-purple-950 font-black px-2.5 py-0.5 rounded-full text-xs">
+            Paso 1
+          </span>
+          <div class="space-y-1 pt-1">
+            <h4 class="font-extrabold text-purple-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="user-check" class="w-4 h-4 text-purple-700"></i> Registro Inicial
+            </h4>
+            <p class="text-xs font-semibold text-slate-600">Completa tu nombre y grupo en la Sección 0. Sin esto no podrás enviar el trabajo.</p>
+          </div>
+          <div class="text-right">
+            <span class="text-[10px] font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Requisito Previo ▼</span>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="bg-white text-slate-900 p-4 rounded-xl border-3 border-black shadow-md flex flex-col justify-between space-y-3 relative">
+          <span class="badge-step absolute -top-3 -left-3 bg-yellow-400 text-purple-950 font-black px-2.5 py-0.5 rounded-full text-xs">
+            Paso 2
+          </span>
+          <div class="space-y-1 pt-1">
+            <h4 class="font-extrabold text-purple-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4 text-purple-700"></i> Matriz (5 Pestañas)
+            </h4>
+            <p class="text-xs font-semibold text-slate-600">Responde las 5 dimensiones completando los 6 campos reflexivos de cada una.</p>
+          </div>
+          <div class="text-right">
+            <span class="text-[10px] font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Desarrollo ▼</span>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="bg-white text-slate-900 p-4 rounded-xl border-3 border-black shadow-md flex flex-col justify-between space-y-3 relative">
+          <span class="badge-step absolute -top-3 -left-3 bg-yellow-400 text-purple-950 font-black px-2.5 py-0.5 rounded-full text-xs">
+            Paso 3
+          </span>
+          <div class="space-y-1 pt-1">
+            <h4 class="font-extrabold text-purple-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="send" class="w-4 h-4 text-purple-700"></i> 1º Enviar Trabajo
+            </h4>
+            <p class="text-xs font-semibold text-slate-600">Presiona "1. Enviar Trabajo ▶". Al confirmarse la transmisión, se desbloqueará el Paso 4.</p>
+          </div>
+          <div class="text-right">
+            <span class="text-[10px] font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Obligatorio 1º ▼</span>
+          </div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="bg-white text-slate-900 p-4 rounded-xl border-3 border-black shadow-md flex flex-col justify-between space-y-3 relative">
+          <span class="badge-step absolute -top-3 -left-3 bg-yellow-400 text-purple-950 font-black px-2.5 py-0.5 rounded-full text-xs">
+            Paso 4
+          </span>
+          <div class="space-y-1 pt-1">
+            <h4 class="font-extrabold text-purple-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="file-check" class="w-4 h-4 text-purple-700"></i> 2º Exportar PDF
+            </h4>
+            <p class="text-xs font-semibold text-slate-600">Descarga tu PDF de evidencia para subirlo a la plataforma virtual del Instituto i3.</p>
+          </div>
+          <div class="text-right">
+            <span id="step4-status-tag" class="text-[10px] font-black uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-0.5 rounded">Bloqueado 🔒</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO GENERAL -->
+    <form id="audit-form" onsubmit="event.preventDefault();" class="space-y-10">
+
+      <!-- SECCIÓN 0: DATOS DEL TALLER / ESTUDIANTE -->
+      <section class="bg-white sticker-card p-6 sm:p-8 space-y-6 border-4 border-purple-900">
+        <div class="flex items-center gap-3 border-b-2 border-slate-200 pb-4">
+          <div class="bg-purple-800 text-white p-2.5 rounded-xl">
+            <i data-lucide="user" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-xl sm:text-2xl font-black text-purple-900">Sección 0: Ficha de Registro de la Actividad</h3>
+            <p class="text-xs sm:text-sm font-semibold text-slate-600">Por favor, completa tus datos personales antes de diligenciar la matriz.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Materia -->
+          <div class="space-y-1">
+            <label class="block text-xs font-extrabold uppercase tracking-wide text-slate-700">Materia / Asignatura</label>
+            <input type="text" id="input-materia" value="Liderazgo y Desarrollo Humano" readonly class="w-full bg-slate-100 border-2 border-slate-300 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 cursor-not-allowed" />
+          </div>
+
+          <!-- Actividad ID (OBLIGATORIO FIJO Y CONGELADO) -->
+          <div class="space-y-1">
+            <label class="block text-xs font-extrabold uppercase tracking-wide text-slate-700">ID de la Actividad (Fijo)</label>
+            <input type="text" id="input-actividad-id" name="actividad_id" value="Liderazgo_ACT01" readonly class="w-full bg-yellow-100 border-2 border-yellow-400 rounded-xl px-3 py-2 text-xs font-black text-purple-900 cursor-not-allowed shadow-inner" />
+          </div>
+
+          <!-- Grupo / Ficha -->
+          <div class="space-y-1">
+            <label for="input-grupo" class="block text-xs font-extrabold uppercase tracking-wide text-slate-700">Grupo / Ficha de Clase *</label>
+            <input type="text" id="input-grupo" placeholder="Ej. Grupo L1 - Noche" required class="w-full bg-white border-2 border-slate-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 transition-all" />
+          </div>
+
+          <!-- Nombre de Participantes -->
+          <div class="space-y-1">
+            <label for="input-participantes" class="block text-xs font-extrabold uppercase tracking-wide text-slate-700">Nombre Completo del Estudiante *</label>
+            <input type="text" id="input-participantes" placeholder="Ej. Ana María Gómez Pérez" required class="w-full bg-white border-2 border-slate-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 transition-all" />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: MATRIZ INTERACTIVA PENTAFACTORIAL -->
+    <section class="space-y-6">
+      <div class="bg-purple-900 text-white sticker-card p-6 flex flex-wrap justify-between items-center gap-4">
+        <div>
+          <span class="bg-yellow-400 text-purple-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+            Core Pedagógico
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black mt-1">Matriz del Modelo Pentafactorial</h3>
+          <p class="text-xs sm:text-sm text-purple-200 font-medium">Navega por las pestañas para diligenciar las 5 dimensiones obligatorias.</p>
+        </div>
+        <div class="bg-purple-800 border border-purple-700 p-3 rounded-2xl text-center">
+          <span class="block text-xs text-purple-300 font-bold">Progreso de Matriz</span>
+          <span id="matrix-progress-badge" class="text-xl font-black text-yellow-300">0 / 5 Completadas</span>
+        </div>
+      </div>
+
+      <!-- SISTEMA DE PESTAÑAS (TABS DE NAVEGACIÓN DENSIDAD REDUCIDA) -->
+      <div class="flex flex-wrap gap-2 border-b-4 border-purple-900 pb-2" id="dimension-tabs">
+        <button type="button" onclick="switchDimensionTab(1)" id="tab-btn-1" class="dim-tab-btn bg-teal-500 text-slate-900 font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl border-2 border-black shadow flex items-center gap-2 transition-all transform scale-105">
+          <span>1. Académica</span>
+          <span id="badge-tab-1" class="w-2 h-2 rounded-full bg-yellow-300"></span>
+        </button>
+        <button type="button" onclick="switchDimensionTab(2)" id="tab-btn-2" class="dim-tab-btn bg-purple-200 text-purple-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl border-2 border-slate-300 hover:bg-purple-300 flex items-center gap-2 transition-all">
+          <span>2. Social</span>
+          <span id="badge-tab-2" class="w-2 h-2 rounded-full bg-slate-400"></span>
+        </button>
+        <button type="button" onclick="switchDimensionTab(3)" id="tab-btn-3" class="dim-tab-btn bg-orange-200 text-orange-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl border-2 border-slate-300 hover:bg-orange-300 flex items-center gap-2 transition-all">
+          <span>3. Emocional</span>
+          <span id="badge-tab-3" class="w-2 h-2 rounded-full bg-slate-400"></span>
+        </button>
+        <button type="button" onclick="switchDimensionTab(4)" id="tab-btn-4" class="dim-tab-btn bg-pink-200 text-pink-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl border-2 border-slate-300 hover:bg-pink-300 flex items-center gap-2 transition-all">
+          <span>4. Familiar</span>
+          <span id="badge-tab-4" class="w-2 h-2 rounded-full bg-slate-400"></span>
+        </button>
+        <button type="button" onclick="switchDimensionTab(5)" id="tab-btn-5" class="dim-tab-btn bg-lime-200 text-lime-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl border-2 border-slate-300 hover:bg-lime-300 flex items-center gap-2 transition-all">
+          <span>5. Física</span>
+          <span id="badge-tab-5" class="w-2 h-2 rounded-full bg-slate-400"></span>
+        </button>
+      </div>
+
+      <!-- PANEL DIMENSIÓN 1: ACADÉMICA / TÉCNICA -->
+      <article id="dim-panel-1" class="dim-panel bg-white sticker-card border-4 border-teal-500 overflow-hidden">
+        <div class="bg-teal-500 text-slate-900 p-4 sm:p-5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="bg-slate-900 text-teal-300 font-black text-lg w-9 h-9 flex items-center justify-center rounded-xl border border-white">1</span>
+            <div>
+              <h4 class="text-lg sm:text-xl font-black">Dimensión 1: Académica / Técnica</h4>
+              <p class="text-xs font-extrabold text-slate-900/80">Rendimiento, aprendizaje, competencias profesionales y desempeño en tareas.</p>
+            </div>
+          </div>
+          <span class="hidden sm:inline-block bg-white text-teal-800 text-xs font-black px-3 py-1 rounded-full shadow-sm">Etapa 1 de 5</span>
+        </div>
+
+        <!-- Instrucción específica de la dimensión -->
+        <div class="bg-teal-50 border-b border-teal-200 p-4 text-xs text-teal-950 space-y-2">
+          <div class="font-extrabold text-teal-900 flex items-center gap-1.5 text-sm">
+            <i data-lucide="help-circle" class="w-4 h-4 text-teal-700"></i>
+            <span>Guía Instruccional de Diligenciamiento (Dimensión Académica):</span>
+          </div>
+          <p class="font-medium leading-relaxed">
+            <strong>Paso 1:</strong> Piensa en una <u>situación académica o técnica específica y reciente</u> (ej. hacer una pregunta en clase, resolver un examen o presentar un informe).<br/>
+            <strong>Paso 2:</strong> Desglosa los 6 campos indicando qué expresaste exteriormente (palabras y cuerpo) y qué viviste en silencio (diálogo mental y reacción física), para definir un compromiso de cambio ejecutable.
+          </p>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="space-y-1.5">
+            <label for="d1-c1" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="message-square" class="w-3.5 h-3.5 text-teal-600"></i> Autoconcepto (Lo que digo hacia afuera) *
+            </label>
+            <textarea id="d1-c1" rows="3" required placeholder="Ej: 'Qué pena molestar, pero...', 'A mí esto me va a quedar mal...'" class="w-full bg-slate-50 border-2 border-slate-300 focus:border-teal-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d1-c2" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="user" class="w-3.5 h-3.5 text-teal-600"></i> Autoconcepto (Lo que hago con el cuerpo) *
+            </label>
+            <textarea id="d1-c2" rows="3" required placeholder="Ej: 'Bajo la mirada al hablar con el profesor', 'Me pongo detrás del compañero más alto'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-teal-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d1-c3" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="brain" class="w-3.5 h-3.5 text-teal-600"></i> Autoestima (Diálogo interno) *
+            </label>
+            <textarea id="d1-c3" rows="3" required placeholder="Ej: 'Eres incapaz de aprender este programa', 'A nadie le importa lo que pienses'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-teal-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d1-c4" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="activity" class="w-3.5 h-3.5 text-teal-600"></i> Autoestima (Reacción física/emocional) *
+            </label>
+            <textarea id="d1-c4" rows="3" required placeholder="Ej: 'Nudo en el estómago antes de participar', 'Tensión severa en el cuello'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-teal-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d1-c5" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-teal-600"></i> Impacto en el entorno *
+            </label>
+            <textarea id="d1-c5" rows="3" required placeholder="Ej: 'Pierdo oportunidades de participar y mis notas bajan'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-teal-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5 bg-teal-50 p-3 rounded-xl border border-teal-200">
+            <label for="d1-c6" class="block text-xs font-black text-teal-900 flex items-center gap-1">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-teal-700"></i> Palabra/Acción Sustituta (Compromiso) *
+            </label>
+            <textarea id="d1-c6" rows="3" required placeholder="Ej: 'Elimino la frase qué pena y digo: Profe, tengo una duda puntual sobre el ejercicio'." class="w-full bg-white border-2 border-teal-300 focus:border-teal-600 rounded-xl p-3 text-xs font-bold text-slate-900 transition-all"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 px-6 py-3 flex justify-between items-center border-t border-slate-200">
+          <span class="text-xs font-bold text-slate-600">👉 Siguiente paso: Dimensión 2 (Social)</span>
+          <button type="button" onclick="switchDimensionTab(2)" class="bg-teal-600 hover:bg-teal-700 text-white font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <span>Ir a Dimensión 2 (Social)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- PANEL DIMENSIÓN 2: SOCIAL -->
+      <article id="dim-panel-2" class="dim-panel hidden bg-white sticker-card border-4 border-purple-600 overflow-hidden">
+        <div class="bg-purple-600 text-white p-4 sm:p-5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="bg-white text-purple-900 font-black text-lg w-9 h-9 flex items-center justify-center rounded-xl border border-black">2</span>
+            <div>
+              <h4 class="text-lg sm:text-xl font-black">Dimensión 2: Social</h4>
+              <p class="text-xs font-extrabold text-purple-100">Relaciones interpersonales, trabajo en equipo, asertividad y comunicación colectiva.</p>
+            </div>
+          </div>
+          <span class="hidden sm:inline-block bg-purple-800 text-yellow-300 text-xs font-black px-3 py-1 rounded-full shadow-sm">Etapa 2 de 5</span>
+        </div>
+
+        <!-- Instrucción específica de la dimensión -->
+        <div class="bg-purple-50 border-b border-purple-200 p-4 text-xs text-purple-950 space-y-2">
+          <div class="font-extrabold text-purple-900 flex items-center gap-1.5 text-sm">
+            <i data-lucide="help-circle" class="w-4 h-4 text-purple-700"></i>
+            <span>Guía Instruccional de Diligenciamiento (Dimensión Social):</span>
+          </div>
+          <p class="font-medium leading-relaxed">
+            <strong>Paso 1:</strong> Piensa en una <u>situación social o interactiva específica</u> (ej. integrarte a un nuevo equipo, dar tu opinión en un grupo o decir 'no' ante una solicitud injusta).<br/>
+            <strong>Paso 2:</strong> Detalla las palabras/gestos que usas hacia afuera (Autoconcepto) versus los pensamientos/sensaciones que guardas en privado (Autoestima).
+          </p>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="space-y-1.5">
+            <label for="d2-c1" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="message-square" class="w-3.5 h-3.5 text-purple-600"></i> Autoconcepto (Lo que digo hacia afuera) *
+            </label>
+            <textarea id="d2-c1" rows="3" required placeholder="Ej: 'Hagan lo que ustedes quieran, a mí me da igual', 'Yo no soy bueno relacionándome'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-purple-600 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d2-c2" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="user" class="w-3.5 h-3.5 text-purple-600"></i> Autoconcepto (Lo que hago con el cuerpo) *
+            </label>
+            <textarea id="d2-c2" rows="3" required placeholder="Ej: 'Me cruzo de brazos y me aislo en una esquina durante los descansos'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-purple-600 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d2-c3" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="brain" class="w-3.5 h-3.5 text-purple-600"></i> Autoestima (Diálogo interno) *
+            </label>
+            <textarea id="d2-c3" rows="3" required placeholder="Ej: 'Si expreso lo que pienso se van a molestar conmigo'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-purple-600 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d2-c4" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="activity" class="w-3.5 h-3.5 text-purple-600"></i> Autoestima (Reacción física/emocional) *
+            </label>
+            <textarea id="d2-c4" rows="3" required placeholder="Ej: 'Sudoración en las manos al integrarme a un grupo nuevo'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-purple-600 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d2-c5" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-purple-600"></i> Impacto en el entorno *
+            </label>
+            <textarea id="d2-c5" rows="3" required placeholder="Ej: 'Termino asumiendo todo el trabajo pesado por no saber decir no'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-purple-600 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5 bg-purple-50 p-3 rounded-xl border border-purple-200">
+            <label for="d2-c6" class="block text-xs font-black text-purple-900 flex items-center gap-1">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-700"></i> Palabra/Acción Sustituta (Compromiso) *
+            </label>
+            <textarea id="d2-c6" rows="3" required placeholder="Ej: 'Propongo asertivamente: Sugiero distribuir las tareas de manera equitativa'." class="w-full bg-white border-2 border-purple-300 focus:border-purple-600 rounded-xl p-3 text-xs font-bold text-slate-900 transition-all"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 px-6 py-3 flex justify-between border-t border-slate-200">
+          <button type="button" onclick="switchDimensionTab(1)" class="bg-slate-300 hover:bg-slate-400 text-slate-900 font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Anterior</span>
+          </button>
+          <button type="button" onclick="switchDimensionTab(3)" class="bg-purple-700 hover:bg-purple-800 text-white font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <span>Siguiente: Dimensión 3 (Emocional)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- PANEL DIMENSIÓN 3: EMOCIONAL -->
+      <article id="dim-panel-3" class="dim-panel hidden bg-white sticker-card border-4 border-orange-500 overflow-hidden">
+        <div class="bg-orange-500 text-white p-4 sm:p-5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="bg-slate-900 text-orange-400 font-black text-lg w-9 h-9 flex items-center justify-center rounded-xl border border-white">3</span>
+            <div>
+              <h4 class="text-lg sm:text-xl font-black">Dimensión 3: Emocional</h4>
+              <p class="text-xs font-extrabold text-white/90">Autorregulación, gestión del estrés, tolerancia a la frustración y autocontrol.</p>
+            </div>
+          </div>
+          <span class="hidden sm:inline-block bg-slate-900 text-orange-400 text-xs font-black px-3 py-1 rounded-full shadow-sm">Etapa 3 de 5</span>
+        </div>
+
+        <!-- Instrucción específica de la dimensión -->
+        <div class="bg-orange-50 border-b border-orange-200 p-4 text-xs text-orange-950 space-y-2">
+          <div class="font-extrabold text-orange-900 flex items-center gap-1.5 text-sm">
+            <i data-lucide="help-circle" class="w-4 h-4 text-orange-700"></i>
+            <span>Guía Instruccional de Diligenciamiento (Dimensión Emocional):</span>
+          </div>
+          <p class="font-medium leading-relaxed">
+            <strong>Paso 1:</strong> Recuerda un <u>momento específico de estrés, frustración o rabia</u> reciente (ej. cuando algo no salió como esperabas o cometiste un error bajo presión).<br/>
+            <strong>Paso 2:</strong> Examina cómo reaccionaste corporalmente e identifica el pensamiento automático que desencadenó esa emoción.
+          </p>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="space-y-1.5">
+            <label for="d3-c1" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="message-square" class="w-3.5 h-3.5 text-orange-600"></i> Autoconcepto (Lo que digo hacia afuera) *
+            </label>
+            <textarea id="d3-c1" rows="3" required placeholder="Ej: 'Es que yo soy de mal genio y nadie me cambia', 'Todo me estresa'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-orange-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d3-c2" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="user" class="w-3.5 h-3.5 text-orange-600"></i> Autoconcepto (Lo que hago con el cuerpo) *
+            </label>
+            <textarea id="d3-c2" rows="3" required placeholder="Ej: 'Aprieto los puños o la mandíbula cuando algo no sale como esperaba'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-orange-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d3-c3" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="brain" class="w-3.5 h-3.5 text-orange-600"></i> Autoestima (Diálogo interno) *
+            </label>
+            <textarea id="d3-c3" rows="3" required placeholder="Ej: 'Siempre todo sale mal cuando yo lo intento'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-orange-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d3-c4" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="activity" class="w-3.5 h-3.5 text-orange-600"></i> Autoestima (Reacción física/emocional) *
+            </label>
+            <textarea id="d3-c4" rows="3" required placeholder="Ej: 'Presión fuerte en el pecho e hiperventilación'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-orange-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d3-c5" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-orange-600"></i> Impacto en el entorno *
+            </label>
+            <textarea id="d3-c5" rows="3" required placeholder="Ej: 'Reacciono impulsivamente y genero ambiente tenso en mi entorno'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-orange-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5 bg-orange-50 p-3 rounded-xl border border-orange-200">
+            <label for="d3-c6" class="block text-xs font-black text-orange-900 flex items-center gap-1">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-orange-700"></i> Palabra/Acción Sustituta (Compromiso) *
+            </label>
+            <textarea id="d3-c6" rows="3" required placeholder="Ej: 'Respiro profundo 5 segundos y digo: Evaluemos las opciones con calma'." class="w-full bg-white border-2 border-orange-300 focus:border-orange-600 rounded-xl p-3 text-xs font-bold text-slate-900 transition-all"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 px-6 py-3 flex justify-between border-t border-slate-200">
+          <button type="button" onclick="switchDimensionTab(2)" class="bg-slate-300 hover:bg-slate-400 text-slate-900 font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Anterior</span>
+          </button>
+          <button type="button" onclick="switchDimensionTab(4)" class="bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <span>Siguiente: Dimensión 4 (Familiar)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- PANEL DIMENSIÓN 4: FAMILIAR -->
+      <article id="dim-panel-4" class="dim-panel hidden bg-white sticker-card border-4 border-pink-500 overflow-hidden">
+        <div class="bg-pink-500 text-white p-4 sm:p-5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="bg-white text-pink-700 font-black text-lg w-9 h-9 flex items-center justify-center rounded-xl border border-black">4</span>
+            <div>
+              <h4 class="text-lg sm:text-xl font-black">Dimensión 4: Familiar</h4>
+              <p class="text-xs font-extrabold text-pink-100">Comunicación con el núcleo cercano, roles en el hogar y resolución de desacuerdos.</p>
+            </div>
+          </div>
+          <span class="hidden sm:inline-block bg-pink-900 text-pink-200 text-xs font-black px-3 py-1 rounded-full shadow-sm">Etapa 4 de 5</span>
+        </div>
+
+        <!-- Instrucción específica de la dimensión -->
+        <div class="bg-pink-50 border-b border-pink-200 p-4 text-xs text-pink-950 space-y-2">
+          <div class="font-extrabold text-pink-900 flex items-center gap-1.5 text-sm">
+            <i data-lucide="help-circle" class="w-4 h-4 text-pink-700"></i>
+            <span>Guía Instruccional de Diligenciamiento (Dimensión Familiar):</span>
+          </div>
+          <p class="font-medium leading-relaxed">
+            <strong>Paso 1:</strong> Elige un <u>desacuerdo o interacción habitual en tu hogar</u> (ej. el reparto de responsabilidades domésticas o la comunicación con padres/pareja/hijos).<br/>
+            <strong>Paso 2:</strong> Registra las frases cotidianas que dices, tu postura física al hablar y el impacto real que genera en la convivencia familiar.
+          </p>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="space-y-1.5">
+            <label for="d4-c1" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="message-square" class="w-3.5 h-3.5 text-pink-600"></i> Autoconcepto (Lo que digo hacia afuera) *
+            </label>
+            <textarea id="d4-c1" rows="3" required placeholder="Ej: 'En esta casa nadie me ayuda', 'Siempre me toca todo a mí'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-pink-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d4-c2" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="user" class="w-3.5 h-3.5 text-pink-600"></i> Autoconcepto (Lo que hago con el cuerpo) *
+            </label>
+            <textarea id="d4-c2" rows="3" required placeholder="Ej: 'Encorvo la postura y hago ademanes bruscos de molestia'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-pink-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d4-c3" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="brain" class="w-3.5 h-3.5 text-pink-600"></i> Autoestima (Diálogo interno) *
+            </label>
+            <textarea id="d4-c3" rows="3" required placeholder="Ej: 'Nadie en la familia valora el esfuerzo que hago'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-pink-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d4-c4" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="activity" class="w-3.5 h-3.5 text-pink-600"></i> Autoestima (Reacción física/emocional) *
+            </label>
+            <textarea id="d4-c4" rows="3" required placeholder="Ej: 'Cansancio extremo y pesadez muscular en la espalda'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-pink-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d4-c5" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-pink-600"></i> Impacto en el entorno *
+            </label>
+            <textarea id="d4-c5" rows="3" required placeholder="Ej: 'Peleas frecuentes y distanciamiento con mis familiares'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-pink-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5 bg-pink-50 p-3 rounded-xl border border-pink-200">
+            <label for="d4-c6" class="block text-xs font-black text-pink-900 flex items-center gap-1">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-pink-700"></i> Palabra/Acción Sustituta (Compromiso) *
+            </label>
+            <textarea id="d4-c6" rows="3" required placeholder="Ej: 'Propongo acuerdos: Hagamos una reunión de 10 minutos para acordar los roles'." class="w-full bg-white border-2 border-pink-300 focus:border-pink-600 rounded-xl p-3 text-xs font-bold text-slate-900 transition-all"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 px-6 py-3 flex justify-between border-t border-slate-200">
+          <button type="button" onclick="switchDimensionTab(3)" class="bg-slate-300 hover:bg-slate-400 text-slate-900 font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Anterior</span>
+          </button>
+          <button type="button" onclick="switchDimensionTab(5)" class="bg-pink-600 hover:bg-pink-700 text-white font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <span>Siguiente: Dimensión 5 (Física)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- PANEL DIMENSIÓN 5: FÍSICA -->
+      <article id="dim-panel-5" class="dim-panel hidden bg-white sticker-card border-4 border-lime-500 overflow-hidden">
+        <div class="bg-lime-400 text-slate-900 p-4 sm:p-5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="bg-slate-900 text-lime-400 font-black text-lg w-9 h-9 flex items-center justify-center rounded-xl border border-white">5</span>
+            <div>
+              <h4 class="text-lg sm:text-xl font-black">Dimensión 5: Física</h4>
+              <p class="text-xs font-extrabold text-slate-900/80">Salud, autocuidado, descanso, ergonomía corporal y niveles energéticos.</p>
+            </div>
+          </div>
+          <span class="hidden sm:inline-block bg-slate-900 text-lime-300 text-xs font-black px-3 py-1 rounded-full shadow-sm">Etapa 5 de 5</span>
+        </div>
+
+        <!-- Instrucción específica de la dimensión -->
+        <div class="bg-lime-50 border-b border-lime-200 p-4 text-xs text-lime-950 space-y-2">
+          <div class="font-extrabold text-lime-900 flex items-center gap-1.5 text-sm">
+            <i data-lucide="help-circle" class="w-4 h-4 text-lime-700"></i>
+            <span>Guía Instruccional de Diligenciamiento (Dimensión Física):</span>
+          </div>
+          <p class="font-medium leading-relaxed">
+            <strong>Paso 1:</strong> Identifica un <u>hábito corporal o de salud cotidiano</u> (ej. tus rutinas de postura frente al computador, hábitos de sueño o pausas de descanso).<br/>
+            <strong>Paso 2:</strong> Describe qué excusas o frases dices hacia afuera, los síntomas físicos resultantes (fatiga, tensión) y la acción de cambio que mantendrás.
+          </p>
+        </div>
+
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="space-y-1.5">
+            <label for="d5-c1" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="message-square" class="w-3.5 h-3.5 text-lime-600"></i> Autoconcepto (Lo que digo hacia afuera) *
+            </label>
+            <textarea id="d5-c1" rows="3" required placeholder="Ej: 'No tengo tiempo de comer bien ni hacer pausa', 'Vivo agotado'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-lime-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d5-c2" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="user" class="w-3.5 h-3.5 text-lime-600"></i> Autoconcepto (Lo que hago con el cuerpo) *
+            </label>
+            <textarea id="d5-c2" rows="3" required placeholder="Ej: 'Encorvo la columna en la silla y me froto la frente todo el día'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-lime-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d5-c3" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="brain" class="w-3.5 h-3.5 text-lime-600"></i> Autoestima (Diálogo interno) *
+            </label>
+            <textarea id="d5-c3" rows="3" required placeholder="Ej: 'Mi cuerpo ya no rinde para estar activo'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-lime-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d5-c4" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="activity" class="w-3.5 h-3.5 text-lime-600"></i> Autoestima (Reacción física/emocional) *
+            </label>
+            <textarea id="d5-c4" rows="3" required placeholder="Ej: 'Fatiga constante, migrañas y pesadez en la vista'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-lime-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5">
+            <label for="d5-c5" class="block text-xs font-black text-slate-800 flex items-center gap-1">
+              <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-lime-600"></i> Impacto en el entorno *
+            </label>
+            <textarea id="d5-c5" rows="3" required placeholder="Ej: 'Bajo rendimiento de trabajo y mal humor continuo'." class="w-full bg-slate-50 border-2 border-slate-300 focus:border-lime-500 rounded-xl p-3 text-xs font-medium text-slate-800 focus:bg-white transition-all"></textarea>
+          </div>
+          <div class="space-y-1.5 bg-lime-50 p-3 rounded-xl border border-lime-200">
+            <label for="d5-c6" class="block text-xs font-black text-lime-900 flex items-center gap-1">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-lime-700"></i> Palabra/Acción Sustituta (Compromiso) *
+            </label>
+            <textarea id="d5-c6" rows="3" required placeholder="Ej: 'Ajusto mi postura conscientemente y realizo una caminata de 15 minutos diarios'." class="w-full bg-white border-2 border-lime-300 focus:border-lime-600 rounded-xl p-3 text-xs font-bold text-slate-900 transition-all"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-slate-100 px-6 py-3 flex justify-between border-t border-slate-200">
+          <button type="button" onclick="switchDimensionTab(4)" class="bg-slate-300 hover:bg-slate-400 text-slate-900 font-extrabold text-xs px-4 py-2 rounded-xl border border-black flex items-center gap-1 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Anterior</span>
+          </button>
+          <span class="text-xs font-extrabold text-lime-800 self-center">¡Matriz Completada! Continúa abajo al Paso Final ▼</span>
+        </div>
+      </article>
+    </section>
+
+      <!-- SECCIÓN 3: RÚBRICA Y AUTOEVALUACIÓN -->
+      <section class="bg-white sticker-card p-6 sm:p-8 space-y-6 border-4 border-purple-900">
+        <details class="group border-2 border-purple-200 rounded-2xl overflow-hidden bg-purple-50/50">
+          <summary class="flex justify-between items-center font-black cursor-pointer p-4 sm:p-5 bg-purple-100 text-purple-950 group-open:bg-purple-900 group-open:text-white transition-all">
+            <span class="flex items-center gap-2 text-base sm:text-lg">
+              <i data-lucide="award" class="w-6 h-6 text-yellow-400"></i>
+              ¿Cómo saber si mi auditoría está bien hecha? (Rúbrica de Éxito de 5 Criterios)
+            </span>
+            <span class="text-xs bg-white text-purple-950 px-3 py-1 rounded-full border border-purple-900 group-open:bg-yellow-400 group-open:text-purple-950">
+              Ver Rúbrica ▼
+            </span>
+          </summary>
+          
+          <div class="p-6 space-y-4 text-xs sm:text-sm text-slate-800">
+            <p class="font-bold text-purple-900">
+              Para garantizar el éxito de tu entrega en el Instituto i3, verifica que tus respuestas cumplan con los 5 criterios de autoevaluación:
+            </p>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse border-2 border-slate-300 text-xs">
+                <thead>
+                  <tr class="bg-purple-900 text-white">
+                    <th class="p-3 border border-slate-300 font-extrabold">Criterio</th>
+                    <th class="p-3 border border-slate-300 font-extrabold">Excelente (100%)</th>
+                    <th class="p-3 border border-slate-300 font-extrabold">Aceptable (70%)</th>
+                    <th class="p-3 border border-slate-300 font-extrabold">Insuficiente (30%)</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white font-medium">
+                  <tr>
+                    <td class="p-3 border border-slate-300 font-bold bg-slate-50">1. Autoconcepto (Lenguaje y Cuerpo)</td>
+                    <td class="p-3 border border-slate-300">Identifica frases literales y gestos corporales exactos en las 5 dimensiones.</td>
+                    <td class="p-3 border border-slate-300">Describe el autoconcepto de forma abstracta o incompleta.</td>
+                    <td class="p-3 border border-slate-300">Solo coloca explicaciones vagas o deja dimensiones vacías.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 border border-slate-300 font-bold bg-slate-50">2. Autoestima (Diálogo y Reacción)</td>
+                    <td class="p-3 border border-slate-300">Expresa honestamente pensamientos internos y sensaciones físicas concretas.</td>
+                    <td class="p-3 border border-slate-300">Menciona pensamientos pero omite o simplifica la reacción física.</td>
+                    <td class="p-3 border border-slate-300">No reconoce emociones ni diálogo privado.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 border border-slate-300 font-bold bg-slate-50">3. Impacto en el Entorno</td>
+                    <td class="p-3 border border-slate-300">Detalla la consecuencia real en su entorno cotidiano con claridad.</td>
+                    <td class="p-3 border border-slate-300">Menciona consecuencias genéricas sin vincular a su contexto personal.</td>
+                    <td class="p-3 border border-slate-300">No establece relación de impacto.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 border border-slate-300 font-bold bg-slate-50">4. Acción Sustituta</td>
+                    <td class="p-3 border border-slate-300">Redacta compromisos ejecutables en primera persona y con lenguaje asertivo.</td>
+                    <td class="p-3 border border-slate-300">El compromiso es impreciso o difícil de medir en el corto plazo.</td>
+                    <td class="p-3 border border-slate-300">No propone acciones de reemplazo reales.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 border border-slate-300 font-bold bg-slate-50">5. Completitud del Formato</td>
+                    <td class="p-3 border border-slate-300">Diligencia el 100% de la matriz pentafactorial (30 campos requeridos).</td>
+                    <td class="p-3 border border-slate-300">Diligencia entre el 70% y 90% de los campos obligatorios.</td>
+                    <td class="p-3 border border-slate-300">Omite dimensiones completas de la matriz.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- SECCIÓN 4: BOTONES Y ACCIONES DE CONTROL -->
+      <section class="bg-purple-950 sticker-card p-6 sm:p-8 text-white space-y-6">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="bg-yellow-400 text-purple-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+            Secuencia Obligatoria de Entrega
+          </span>
+          <h3 class="text-2xl font-black text-yellow-400">Paso Final: Transmisión y Generación de Evidencias</h3>
+          <p class="text-xs sm:text-sm text-purple-200 leading-relaxed">
+            Para garantizar que tu trabajo sea registrado por el docente y puedas generar tu soporte en PDF, debes seguir estrictamente los 2 pasos en orden:
+          </p>
+        </div>
+
+        <!-- Alerta de flujo de trabajo -->
+        <div id="submission-flow-banner" class="bg-purple-900 border-2 border-yellow-400 rounded-2xl p-4 text-xs text-yellow-200 space-y-1 max-w-3xl mx-auto flex items-start gap-3">
+          <i data-lucide="shield-alert" class="w-6 h-6 text-yellow-400 shrink-0 mt-0.5"></i>
+          <div>
+            <strong class="text-white block text-sm font-black mb-0.5">⚠️ Regla de Envío y Descarga:</strong>
+            El botón <span class="text-cyan-300 font-bold">"2. Exportar a PDF"</span> se encuentra bloqueado inicialmente. Debes hacer clic en <span class="text-lime-300 font-bold">"1. Enviar Trabajo"</span> para transmitir tus respuestas a Google Sheets. Una vez confirmado el envío, el sistema habilitará automáticamente la generación del reporte PDF.
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+          
+          <!-- Botón 1: Enviar a Google Sheets -->
+          <div class="space-y-1">
+            <button type="button" onclick="sendToGoogleSheets()" class="w-full bg-lime-400 hover:bg-lime-300 text-purple-950 font-black py-4 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm transform hover:-translate-y-0.5 border-2 border-white">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              <span>1. Enviar Trabajo ▶</span>
+            </button>
+            <span id="badge-step1-status" class="block text-[10px] font-bold text-center text-yellow-300 bg-purple-900/90 py-1 rounded-lg border border-purple-700">
+              Paso 1: Pendiente de envío
+            </span>
+          </div>
+
+          <!-- Botón 2: Exportar a PDF / Imprimir (Bloqueado dinámicamente) -->
+          <div class="space-y-1">
+            <button type="button" id="btn-export-pdf" onclick="openPreview()" disabled class="w-full bg-slate-700 opacity-60 cursor-not-allowed text-slate-300 font-black py-4 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm border-2 border-slate-500">
+              <i data-lucide="lock" id="icon-pdf-lock" class="w-5 h-5"></i>
+              <span>2. Exportar a PDF</span>
+            </button>
+            <span id="badge-step2-status" class="block text-[10px] font-bold text-center text-slate-400 bg-purple-900/90 py-1 rounded-lg border border-purple-700">
+              Paso 2: Requiere completar Paso 1
+            </span>
+          </div>
+
+          <!-- Botón 3: Descargar Respaldos JSON -->
+          <div class="space-y-1">
+            <button type="button" onclick="downloadBackup()" class="w-full bg-purple-700 hover:bg-purple-600 text-white font-black py-4 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-xs border border-purple-500 h-[54px]">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Descargar JSON</span>
+            </button>
+            <span class="block text-[10px] font-medium text-center text-purple-300">Respaldo local descargable</span>
+          </div>
+
+          <!-- Botón 4: Cargar Respaldos JSON -->
+          <div class="space-y-1">
+            <label class="w-full bg-purple-800 hover:bg-purple-700 text-white font-black py-4 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-xs cursor-pointer border border-purple-500 h-[54px]">
+              <i data-lucide="upload" class="w-4 h-4"></i>
+              <span>Cargar JSON</span>
+              <input type="file" id="json-file-input" accept=".json" class="hidden" onchange="handleFileUpload(event)" />
+            </label>
+            <span class="block text-[10px] font-medium text-center text-purple-300">Restaurar copia guardada</span>
+          </div>
+        </div>
+
+        <!-- Botón de Limpieza -->
+        <div class="text-center pt-4 border-t border-purple-800/80">
+          <button type="button" onclick="promptClearForm()" class="text-xs text-pink-400 hover:text-pink-300 font-extrabold underline inline-flex items-center gap-1">
+            <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+            <span>Reiniciar / Limpiar Formulario Completo</span>
+          </button>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- MODAL CUSTOMIZADO MULTIUSO -->
+  <div id="custom-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div id="modal-box" class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl space-y-4 transform scale-95 transition-transform border-4 border-purple-900">
+      <div class="flex items-center gap-3">
+        <div class="bg-purple-100 p-2 rounded-xl text-purple-800">
+          <i id="modal-icon" data-lucide="info" class="w-6 h-6"></i>
+        </div>
+        <h4 id="modal-title" class="font-black text-purple-950 text-base"></h4>
+      </div>
+      <p id="modal-message" class="text-xs text-slate-700 leading-relaxed whitespace-pre-line"></p>
+      <div id="modal-actions" class="flex justify-end gap-2 pt-2 border-t border-slate-100"></div>
+    </div>
+  </div>
+
+  <!-- LÓGICA JAVASCRIPT DEFENSA Y CONTROL DE FLUJO -->
+  <script>
+    const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbykP5mOpfvgjO-R3aMf2t8tzAg-nc5Tc2cpVmtpRh33C-ZwYUW9G9-CWr-bq7zVEv5s/exec";
+    const STORAGE_KEY = "i3_Liderazgo_ACT01_data";
+
+    // ESTADO DE SECUENCIA DE ENVÍO
+    let hasSubmittedToSheets = false;
+
+    // Función auxiliar para escapar código HTML e impedir inyecciones / roturas
+    function escapeHtml(str) {
+      return (str || '').toString().replace(/[&<>"']/g, c => ({
+        '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+      }[c]));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      safeInitLucide();
+      loadStoredData();
+      attachAutoSave();
+      updateProgress();
+      updateSubmissionUI();
+    });
+
+    // CORRECCIÓN CRÍTICA DEFENSA LUCIDE ICONS
+    function safeInitLucide() {
+      if (typeof window !== 'undefined' && window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    // ACTUALIZACIÓN DE INTERFAZ DE SECUENCIA OBLIGATORIA (BOTÓN PDF)
+    function updateSubmissionUI() {
+      const btnPdf = document.getElementById('btn-export-pdf');
+      const badgeStep1 = document.getElementById('badge-step1-status');
+      const badgeStep2 = document.getElementById('badge-step2-status');
+      const step4Tag = document.getElementById('step4-status-tag');
+
+      if (!btnPdf) return;
+
+      if (hasSubmittedToSheets) {
+        btnPdf.disabled = false;
+        btnPdf.className = "w-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-black py-4 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm transform hover:-translate-y-0.5 border-2 border-white cursor-pointer";
+        
+        if (badgeStep1) {
+          badgeStep1.innerText = "Paso 1: Enviado a Google Sheets ✅";
+          badgeStep1.className = "block text-[10px] font-black text-center text-lime-400 bg-purple-900/90 py-1 rounded-lg border border-lime-500/50";
+        }
+
+        if (badgeStep2) {
+          badgeStep2.innerText = "Paso 2: Habilitado para descarga ✅";
+          badgeStep2.className = "block text-[10px] font-black text-center text-cyan-300 bg-purple-900/90 py-1 rounded-lg border border-cyan-500/50";
+        }
+
+        if (step4Tag) {
+          step4Tag.innerText = "Habilitado ✅";
+          step4Tag.className = "text-[10px] font-black uppercase tracking-wider text-purple-900 bg-lime-300 px-2 py-0.5 rounded";
+        }
+      } else {
+        btnPdf.disabled = true;
+        btnPdf.className = "w-full bg-slate-700 opacity-60 cursor-not-allowed text-slate-300 font-black py-4 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm border-2 border-slate-500";
+        
+        if (badgeStep1) {
+          badgeStep1.innerText = "Paso 1: Pendiente de envío";
+          badgeStep1.className = "block text-[10px] font-bold text-center text-yellow-300 bg-purple-900/90 py-1 rounded-lg border border-purple-700";
+        }
+
+        if (badgeStep2) {
+          badgeStep2.innerText = "Paso 2: Requiere completar Paso 1";
+          badgeStep2.className = "block text-[10px] font-bold text-center text-slate-400 bg-purple-900/90 py-1 rounded-lg border border-purple-700";
+        }
+
+        if (step4Tag) {
+          step4Tag.innerText = "Bloqueado 🔒";
+          step4Tag.className = "text-[10px] font-black uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-0.5 rounded";
+        }
+      }
+      safeInitLucide();
+    }
+
+    // NAVEGACIÓN Y CAMBIO DE PESTAÑAS (SISTEMA DE TABS)
+    function switchDimensionTab(tabIndex) {
+      document.querySelectorAll('.dim-panel').forEach(panel => panel.classList.add('hidden'));
+      
+      const activePanel = document.getElementById(`dim-panel-${tabIndex}`);
+      if (activePanel) activePanel.classList.remove('hidden');
+
+      const tabConfigs = [
+        { id: 1, color: 'bg-teal-500', text: 'text-slate-900' },
+        { id: 2, color: 'bg-purple-600', text: 'text-white' },
+        { id: 3, color: 'bg-orange-500', text: 'text-white' },
+        { id: 4, color: 'bg-pink-500', text: 'text-white' },
+        { id: 5, color: 'bg-lime-400', text: 'text-slate-900' }
+      ];
+
+      tabConfigs.forEach(cfg => {
+        const btn = document.getElementById(`tab-btn-${cfg.id}`);
+        if (btn) {
+          if (cfg.id === tabIndex) {
+            btn.className = `dim-tab-btn ${cfg.color} ${cfg.text} font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl border-2 border-black shadow flex items-center gap-2 transition-all transform scale-105`;
+          } else {
+            btn.className = `dim-tab-btn bg-slate-100 text-slate-700 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl border-2 border-slate-300 hover:bg-slate-200 flex items-center gap-2 transition-all`;
+          }
+        }
+      });
+
+      safeInitLucide();
+    }
+
+    function showModal(title, message, icon = 'info', confirmCallback = null) {
+      const modal = document.getElementById('custom-modal');
+      const modalBox = document.getElementById('modal-box');
+      const titleEl = document.getElementById('modal-title');
+      const msgEl = document.getElementById('modal-message');
+      const iconEl = document.getElementById('modal-icon');
+      const actionsEl = document.getElementById('modal-actions');
+
+      titleEl.innerText = title;
+      msgEl.innerText = message;
+      iconEl.setAttribute('data-lucide', icon);
+      safeInitLucide();
+
+      if (confirmCallback) {
+        actionsEl.innerHTML = `
+          <button onclick="closeModal()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs px-4 py-2 rounded-xl border border-slate-400">Cancelar</button>
+          <button id="modal-confirm-action" class="bg-pink-600 hover:bg-pink-700 text-white font-bold text-xs px-4 py-2 rounded-xl border border-black">Confirmar</button>
+        `;
+        document.getElementById('modal-confirm-action').onclick = () => {
+          closeModal();
+          confirmCallback();
+        };
+      } else {
+        actionsEl.innerHTML = `
+          <button onclick="closeModal()" class="bg-purple-900 hover:bg-purple-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl border border-black">Aceptar</button>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modalBox.classList.remove('scale-95');
+        modalBox.classList.add('scale-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('custom-modal');
+      const modalBox = document.getElementById('modal-box');
+      modalBox.classList.remove('scale-100');
+      modalBox.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 150);
+    }
+
+    function getFormData() {
+      const d1 = {
+        autoconcepto_palabra: document.getElementById('d1-c1')?.value || "",
+        autoconcepto_cuerpo: document.getElementById('d1-c2')?.value || "",
+        autoestima_mente: document.getElementById('d1-c3')?.value || "",
+        autoestima_cuerpo: document.getElementById('d1-c4')?.value || "",
+        impacto: document.getElementById('d1-c5')?.value || "",
+        compromiso: document.getElementById('d1-c6')?.value || ""
+      };
+
+      const d2 = {
+        autoconcepto_palabra: document.getElementById('d2-c1')?.value || "",
+        autoconcepto_cuerpo: document.getElementById('d2-c2')?.value || "",
+        autoestima_mente: document.getElementById('d2-c3')?.value || "",
+        autoestima_cuerpo: document.getElementById('d2-c4')?.value || "",
+        impacto: document.getElementById('d2-c5')?.value || "",
+        compromiso: document.getElementById('d2-c6')?.value || ""
+      };
+
+      const d3 = {
+        autoconcepto_palabra: document.getElementById('d3-c1')?.value || "",
+        autoconcepto_cuerpo: document.getElementById('d3-c2')?.value || "",
+        autoestima_mente: document.getElementById('d3-c3')?.value || "",
+        autoestima_cuerpo: document.getElementById('d3-c4')?.value || "",
+        impacto: document.getElementById('d3-c5')?.value || "",
+        compromiso: document.getElementById('d3-c6')?.value || ""
+      };
+
+      const d4 = {
+        autoconcepto_palabra: document.getElementById('d4-c1')?.value || "",
+        autoconcepto_cuerpo: document.getElementById('d4-c2')?.value || "",
+        autoestima_mente: document.getElementById('d4-c3')?.value || "",
+        autoestima_cuerpo: document.getElementById('d4-c4')?.value || "",
+        impacto: document.getElementById('d4-c5')?.value || "",
+        compromiso: document.getElementById('d4-c6')?.value || ""
+      };
+
+      const d5 = {
+        autoconcepto_palabra: document.getElementById('d5-c1')?.value || "",
+        autoconcepto_cuerpo: document.getElementById('d5-c2')?.value || "",
+        autoestima_mente: document.getElementById('d5-c3')?.value || "",
+        autoestima_cuerpo: document.getElementById('d5-c4')?.value || "",
+        impacto: document.getElementById('d5-c5')?.value || "",
+        compromiso: document.getElementById('d5-c6')?.value || ""
+      };
+
+      return {
+        materia: document.getElementById('input-materia')?.value || "Liderazgo y Desarrollo Humano",
+        actividad_id: document.getElementById('input-actividad-id')?.value || "Liderazgo_ACT01",
+        grupo: document.getElementById('input-grupo')?.value || "",
+        participantes: document.getElementById('input-participantes')?.value || "",
+        item1: JSON.stringify(d1),
+        item2: JSON.stringify(d2),
+        item3: JSON.stringify(d3),
+        item4: JSON.stringify(d4),
+        item5: JSON.stringify(d5),
+        has_submitted: hasSubmittedToSheets,
+        estado: "Entregado",
+        fecha_envio: new Date().toISOString()
+      };
+    }
+
+    function attachAutoSave() {
+      const inputs = document.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => {
+          saveToLocalStorage();
+          updateProgress();
+        });
+      });
+    }
+
+    function saveToLocalStorage() {
+      const formData = getFormData();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+      const statusText = document.getElementById('save-status-text');
+      if (statusText) {
+        statusText.innerText = "Guardado a las " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      }
+    }
+
+    function loadStoredData() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return;
+      try {
+        const data = JSON.parse(saved);
+        if (data.grupo) document.getElementById('input-grupo').value = data.grupo;
+        if (data.participantes) document.getElementById('input-participantes').value = data.participantes;
+        if (data.has_submitted) hasSubmittedToSheets = data.has_submitted;
+
+        const populateDim = (jsonStr, prefix) => {
+          if (!jsonStr) return;
+          try {
+            const obj = typeof jsonStr === 'string' ? JSON.parse(jsonStr) : jsonStr;
+            if (obj.autoconcepto_palabra) document.getElementById(`${prefix}-c1`).value = obj.autoconcepto_palabra;
+            if (obj.autoconcepto_cuerpo) document.getElementById(`${prefix}-c2`).value = obj.autoconcepto_cuerpo;
+            if (obj.autoestima_mente) document.getElementById(`${prefix}-c3`).value = obj.autoestima_mente;
+            if (obj.autoestima_cuerpo) document.getElementById(`${prefix}-c4`).value = obj.autoestima_cuerpo;
+            if (obj.impacto) document.getElementById(`${prefix}-c5`).value = obj.impacto;
+            if (obj.compromiso) document.getElementById(`${prefix}-c6`).value = obj.compromiso;
+          } catch(e) {}
+        };
+
+        populateDim(data.item1, 'd1');
+        populateDim(data.item2, 'd2');
+        populateDim(data.item3, 'd3');
+        populateDim(data.item4, 'd4');
+        populateDim(data.item5, 'd5');
+      } catch (e) {
+        console.error("Error al cargar datos guardados:", e);
+      }
+    }
+
+    function updateProgress() {
+      let completedDimensions = 0;
+      const prefixes = ['d1', 'd2', 'd3', 'd4', 'd5'];
+
+      prefixes.forEach((prefix, idx) => {
+        let allFilled = true;
+        for (let i = 1; i <= 6; i++) {
+          const val = document.getElementById(`${prefix}-c${i}`)?.value.trim();
+          if (!val) {
+            allFilled = false;
+            break;
+          }
+        }
+        
+        const badgeTab = document.getElementById(`badge-tab-${idx + 1}`);
+        if (badgeTab) {
+          badgeTab.className = allFilled ? "w-2.5 h-2.5 rounded-full bg-lime-400 border border-black" : "w-2.5 h-2.5 rounded-full bg-slate-300";
+        }
+
+        if (allFilled) completedDimensions++;
+      });
+
+      const badge = document.getElementById('matrix-progress-badge');
+      if (badge) {
+        badge.innerText = `${completedDimensions} / 5 Completadas`;
+        badge.className = completedDimensions === 5 ? "text-xl font-black text-lime-400 animate-bounce" : "text-xl font-black text-yellow-300";
+      }
+    }
+
+    async function sendToGoogleSheets() {
+      const grupo = document.getElementById('input-grupo').value.trim();
+      const participantes = document.getElementById('input-participantes').value.trim();
+
+      if (!grupo || !participantes) {
+        showModal("Faltan Datos de Registro", "Por favor completa tu Grupo y Nombre Completo en la Sección 0 antes de enviar tu trabajo.", "alert-circle");
+        document.getElementById('input-grupo').focus();
+        return;
+      }
+
+      const payload = getFormData();
+
+      try {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        // DESBLOQUEAR EL BOTÓN 2 (EXPORTAR PDF)
+        hasSubmittedToSheets = true;
+        saveToLocalStorage();
+        updateSubmissionUI();
+
+        showModal(
+          "¡Paso 1 Completado con Éxito!", 
+          "Los datos de tu trabajo han sido enviados correctamente al servidor del docente en Google Sheets.\n\n🔓 ¡Paso 2 Habilitado! Ya puedes hacer clic en '2. Exportar a PDF' para generar tu evidencia e ingresarla al Aula Virtual del Instituto i3.", 
+          "check-circle"
+        );
+      } catch (error) {
+        console.error("Error en transmisión:", error);
+        showModal("Error de Conexión", "No se pudo transmitir la información al servidor docente. Descarga tu archivo JSON de respaldo e informa a tu profesor.", "alert-triangle");
+      }
+    }
+
+    function openPreview() {
+      // VALIDACIÓN SECUENCIAL OBLIGATORIA
+      if (!hasSubmittedToSheets) {
+        showModal(
+          "Paso 1 Requerido", 
+          "Para poder generar tu reporte en PDF, primero debes presionar el botón '1. Enviar Trabajo ▶' para registrar tus respuestas en el sistema del docente.", 
+          "shield-alert"
+        );
+        return;
+      }
+
+      const grupo = document.getElementById('input-grupo')?.value.trim();
+      const participantes = document.getElementById('input-participantes')?.value.trim();
+
+      if (!grupo || !participantes) {
+        showModal(
+          "Datos Obligatorios Incompletos", 
+          "No puedes generar el reporte PDF sin completar tu Grupo y Nombre Completo en la Sección 0.", 
+          "user-check"
+        );
+        document.getElementById('input-grupo')?.focus();
+        return;
+      }
+
+      const data = getFormData();
+      const prefixes = ['item1', 'item2', 'item3', 'item4', 'item5'];
+      let filledCount = 0;
+
+      prefixes.forEach(key => {
+        try {
+          const obj = JSON.parse(data[key]);
+          if (obj.autoconcepto_palabra && obj.compromiso) filledCount++;
+        } catch(e){}
+      });
+
+      if (filledCount === 0) {
+        showModal(
+          "Matriz Vacía", 
+          "Debes responder al menos una dimensión de la Matriz Pentafactorial antes de exportar la vista previa en PDF.", 
+          "file-warning"
+        );
+        return;
+      }
+
+      const parseItem = (str) => {
+        try { return typeof str === 'string' ? JSON.parse(str) : str; }
+        catch(e) { return {}; }
+      };
+
+      const d1 = parseItem(data.item1);
+      const d2 = parseItem(data.item2);
+      const d3 = parseItem(data.item3);
+      const d4 = parseItem(data.item4);
+      const d5 = parseItem(data.item5);
+
+      const renderDimensionTable = (title, obj) => `
+        <div style="margin-bottom: 18px; page-break-inside: avoid; border: 2px solid #1e40af; border-radius: 8px; overflow: hidden;">
+          <div style="background-color: #1e40af; color: white; padding: 8px 12px; font-weight: bold; font-size: 13px;">
+            ${escapeHtml(title)}
+          </div>
+          <table style="width: 100%; border-collapse: collapse; font-size: 11px; table-layout: fixed;">
+            <tr>
+              <td style="padding: 6px 8px; border: 1px solid #cbd5e1; width: 50%; font-weight: bold; background: #f8fafc; word-break: break-word; overflow-wrap: break-word;">
+                Autoconcepto (Expresión verbal):<br/>
+                <span style="font-weight: normal; color: #1e293b;">${obj.autoconcepto_palabra ? escapeHtml(obj.autoconcepto_palabra) : '<i>Sin responder</i>'}</span>
+              </td>
+              <td style="padding: 6px 8px; border: 1px solid #cbd5e1; width: 50%; font-weight: bold; background: #f8fafc; word-break: break-word; overflow-wrap: break-word;">
+                Autoconcepto (Corporalidad):<br/>
+                <span style="font-weight: normal; color: #1e293b;">${obj.autoconcepto_cuerpo ? escapeHtml(obj.autoconcepto_cuerpo) : '<i>Sin responder</i>'}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 8px; border: 1px solid #cbd5e1; font-weight: bold; background: #f8fafc; word-break: break-word; overflow-wrap: break-word;">
+                Autoestima (Diálogo interno privado):<br/>
+                <span style="font-weight: normal; color: #1e293b;">${obj.autoestima_mente ? escapeHtml(obj.autoestima_mente) : '<i>Sin responder</i>'}</span>
+              </td>
+              <td style="padding: 6px 8px; border: 1px solid #cbd5e1; font-weight: bold; background: #f8fafc; word-break: break-word; overflow-wrap: break-word;">
+                Autoestima (Sintomatología física):<br/>
+                <span style="font-weight: normal; color: #1e293b;">${obj.autoestima_cuerpo ? escapeHtml(obj.autoestima_cuerpo) : '<i>Sin responder</i>'}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 8px; border: 1px solid #cbd5e1; font-weight: bold; background: #f8fafc; word-break: break-word; overflow-wrap: break-word;">
+                Impacto en el Entorno:<br/>
+                <span style="font-weight: normal; color: #1e293b;">${obj.impacto ? escapeHtml(obj.impacto) : '<i>Sin responder</i>'}</span>
+              </td>
+              <td style="padding: 6px 8px; border: 1px solid #cbd5e1; font-weight: bold; background: #eff6ff; word-break: break-word; overflow-wrap: break-word;">
+                Acción Sustituta (Compromiso de cambio):<br/>
+                <span style="font-weight: bold; color: #1e40af;">${obj.compromiso ? escapeHtml(obj.compromiso) : '<i>Sin responder</i>'}</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      `;
+
+      const previewHtml = `
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+          <meta charset="UTF-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <title>Reporte_Auditoria_Liderazgo_${escapeHtml(data.participantes || 'Estudiante')}</title>
+          <style>
+            body { font-family: Arial, Helvetica, sans-serif; color: #0f172a; margin: 25px; line-height: 1.4; }
+            .header { border-bottom: 3px solid #1e40af; padding-bottom: 10px; margin-bottom: 15px; }
+            .title { font-size: 18px; font-weight: bold; color: #1e40af; }
+            .subtitle { font-size: 12px; color: #64748b; }
+            .meta-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; background: #f1f5f9; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 11px; }
+            .no-print { margin-bottom: 15px; text-align: right; }
+            .btn-print { background: #1e40af; color: white; border: none; padding: 8px 16px; font-size: 13px; font-weight: bold; border-radius: 6px; cursor: pointer; }
+            .btn-print:hover { background: #1e3a8a; }
+            @media print {
+              .no-print { display: none !important; }
+              body { margin: 0; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="no-print">
+            <button onclick="window.print()" class="btn-print">🖨️ Imprimir o Guardar como PDF</button>
+          </div>
+
+          <div class="header">
+            <div class="title">Instituto i3 — Reporte de Auditoría Conductual y Lingüística</div>
+            <div class="subtitle">Módulo de Liderazgo y Desarrollo Humano | Modelo Pentafactorial</div>
+          </div>
+
+          <div class="meta-grid">
+            <div><strong>Estudiante:</strong> ${escapeHtml(data.participantes || 'No especificado')}</div>
+            <div><strong>Grupo / Ficha:</strong> ${escapeHtml(data.grupo || 'No especificado')}</div>
+            <div><strong>Materia:</strong> ${escapeHtml(data.materia)}</div>
+            <div><strong>ID Actividad:</strong> ${escapeHtml(data.actividad_id)}</div>
+            <div><strong>Fecha de Emisión:</strong> ${new Date().toLocaleDateString('es-CO')}</div>
+            <div><strong>Estado de Transmisión:</strong> Registrado en Servidor Docente</div>
+          </div>
+
+          <h3 style="font-size: 14px; color: #0f172a; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 12px;">
+            Desarrollo de la Matriz Pentafactorial
+          </h3>
+
+          ${renderDimensionTable('Dimensión 1: Académica / Técnica', d1)}
+          ${renderDimensionTable('Dimensión 2: Social', d2)}
+          ${renderDimensionTable('Dimensión 3: Emocional', d3)}
+          ${renderDimensionTable('Dimensión 4: Familiar', d4)}
+          ${renderDimensionTable('Dimensión 5: Física', d5)}
+
+          <div style="margin-top: 25px; border-top: 1px solid #cbd5e1; padding-top: 8px; font-size: 9px; color: #94a3b8; text-align: center;">
+            Documento digital de evidencia expedido por la plataforma interactiva del Instituto i3.
+          </div>
+        </body>
+        </html>
+      `;
+
+      const previewWindow = window.open('', '_blank');
+      if (previewWindow) {
+        previewWindow.document.write(previewHtml);
+        previewWindow.document.close();
+      } else {
+        showModal("Bloqueador de Ventanas", "Por favor habilita las ventanas emergentes en tu navegador para visualizar el reporte PDF.", "alert-circle");
+      }
+    }
+
+    function downloadBackup() {
+      const data = getFormData();
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Respaldo_${data.actividad_id}_${data.participantes ? data.participantes.replace(/\s+/g, '_') : 'Estudiante'}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          localStorage.setItem(STORAGE_KEY, e.target.result);
+          loadStoredData();
+          updateProgress();
+          updateSubmissionUI();
+          showModal("Respaldo Cargado", "El archivo JSON se cargó correctamente en la sesión.", "check-circle");
+        } catch (err) {
+          showModal("Error de Formato", "El archivo JSON seleccionado no es válido.", "alert-triangle");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function promptClearForm() {
+      showModal(
+        "¿Reiniciar formulario?", 
+        "Se borrará todo tu avance guardado localmente. Esta acción no se puede deshacer.", 
+        "trash-2", 
+        () => {
+          localStorage.removeItem(STORAGE_KEY);
+          location.reload();
+        }
+      );
+    }
+  </script>
+</body>
+</html>
